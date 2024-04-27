@@ -45,4 +45,16 @@ public class Book {
             + ", ISBN: " + isbn + ", Title: " + title 
             + ", Price: " + price;
     }
+
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        if (!super.equals(object)) return false;
+        Book book = (Book) object;
+        return java.util.Objects.equals(id, book.id) && java.util.Objects.equals(isbn, book.isbn) && java.util.Objects.equals(title, book.title) && java.util.Objects.equals(price, book.price);
+    }
+
+    public int hashCode() {
+        return java.util.Objects.hash(super.hashCode(), id, isbn, title, price);
+    }
 }

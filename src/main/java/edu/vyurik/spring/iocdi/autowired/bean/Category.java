@@ -45,4 +45,15 @@ public class Category {
         return "Category -- Id: " + id + ", Name: " + name + ", Book : " + book.toString(); 
     }
 
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        if (!super.equals(object)) return false;
+        Category category = (Category) object;
+        return java.util.Objects.equals(id, category.id) && java.util.Objects.equals(name, category.name) && java.util.Objects.equals(book, category.book);
+    }
+
+    public int hashCode() {
+        return java.util.Objects.hash(super.hashCode(), id, name, book);
+    }
 }
