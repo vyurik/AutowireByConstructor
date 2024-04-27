@@ -14,6 +14,6 @@ public class App
 		System.out.println("=====================bookAutowiredByConstructor  Output Start ===============================");
 		Category category = context.getBean("category", Category.class);
 		System.out.println("Autowiring by Constructor: book = "+ category.getBook().toString());
-		System.out.println("======================bookAutowiredByConstructor   Output End ================================="); 
+		System.out.println("======================bookAutowiredByConstructor   Output End =================================");
     }
 }
